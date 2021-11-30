@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+/* color variables */
+:root {
+    /* Primary */
+    --soft--blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    /* Neutral */
+    --very-dark-blue: hsl(217, 54%, 11%);
+    --very-dark-blue: hsl(216, 50%, 16%);
+    --very-dark-blue: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: hsl(217, 54%, 11%);
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+    min-height: 100vh;
+}
+
+
+.card {
+    border-radius: 20px;
+    background-color: hsl(216, 50%, 16%);
+    max-width: 325px;
+    margin: 50px auto 0;
+    padding: 25px;
+    box-shadow: 10px 10px 25px 10px hsl(217, 54%, 11%);
+}
+
+.card .image {
+    position: relative;
+    cursor: pointer;
+}
+
+.card .image .main {
+    max-width: 100%;
+    border-radius: 3%;
+}
+
+.card .image .icon-overlay {
+    position: absolute;
+    background-color: hsl(178, 100%, 50%, 45%);
+    opacity: 0;
+    border-radius: 3%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 4px);
+}
+
+.card .image .icon-view{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.card .image:hover .icon-overlay, .card .image:hover .icon-view {
+    opacity: 1;
+}
+
+.card .title {
+    color:hsl(0, 0%, 100%);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.card span {
+    color: hsl(215, 51%, 70%);
+    font-weight: 300;
+    font-size: 16.5px;
+}
+
+.card .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--very-dark-blue);
+    padding: 25px 0;
+}
+
+.card .info .pd {
+    display: flex;
+    align-items: center;
+}
+
+.card .info .pd .price {
+    color: hsl(178, 100%, 50%);
+    font-weight: 600;
+    padding-left: 8px;
+    font-size: 15px;
+}
+
+.card .info .pd .day {
+    color: hsl(215, 51%, 70%);
+    font-weight: 400;
+    padding-left: 8px;
+    font-size: 15px;
+}
+
+
+.card .end img {
+    width: 35px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-right: 13px;
+}
+
+.card .end {
+    color: var(--soft--blue);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-top: 20px;
+    font-size: 14.5px;
+}
+
+a.name {
+    color: white;
+    text-decoration: none;
+    padding-left: 5px;
+}
+
+a.name:hover {
+    color: var(--cyan);
+}
+
+.card .title:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+
+
+@media only screen and (max-width: 375px) {
+    body {
+        font-size: 14px;
+    }
+
+    .card {
+        max-width: 85%;   
+    }
+
+    .card span {
+        font-size: 14.5px;
+    }
+
+    .card .info .pd .price {
+        font-size: 14px;
+    }
+
+    .card .info .pd .day {
+        font-size: 14px;
+    }
+    
+}
